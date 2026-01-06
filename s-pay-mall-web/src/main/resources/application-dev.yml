@@ -7,6 +7,11 @@ server:
       min-spare: 10
     accept-count: 10
 
+# 微信公众号对接
+weixin:
+  config:
+    originalid: gh_0d537f05e054
+    token: 0821
 
 # 日志
 logging:

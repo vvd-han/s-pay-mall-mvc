@@ -1,6 +1,6 @@
 /**
- * @author vvd
  * @description
- * @create 2026-01-06 13:37
+ * @author Fuzhengwei bugstack.cn @小傅哥
+ * @create 2024-09-27 17:01
  */
 package com.vvd.common;
