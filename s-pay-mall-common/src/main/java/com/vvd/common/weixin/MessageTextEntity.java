@@ -1,4 +1,4 @@
-package com.vvd.common;
+package com.vvd.common.weixin;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 

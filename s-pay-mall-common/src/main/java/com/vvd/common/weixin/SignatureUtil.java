@@ -1,4 +1,4 @@
-package com.vvd.common;
+package com.vvd.common.weixin;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

@@ -12,6 +12,9 @@ weixin:
   config:
     originalid: gh_0d537f05e054
     token: 0821
+    app-id: wx1a604f4dc2fb7ca9
+    app-secret: 4d4441e61d531c4fad1f4699c3cbc3d1
+    template-id: OpNRXXxdsLzdfywJfyAaP97vpBj-s5RLPu4Ta0ASLVI
 
 # 日志
 logging:
