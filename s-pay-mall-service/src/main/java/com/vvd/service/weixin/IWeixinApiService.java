@@ -1,6 +1,6 @@
 package com.vvd.service.weixin;
 
-import com.vvd.domain.po.WeixinTemplateMessageVO;
+import com.vvd.domain.vo.WeixinTemplateMessageVO;
 import com.vvd.domain.req.WeixinQrCodeReq;
 import com.vvd.domain.res.WeixinQrCodeRes;
 import com.vvd.domain.res.WeixinTokenRes;

@@ -1,8 +1,7 @@
 package com.vvd.service.impl;
 
 import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
-import com.vvd.domain.po.WeixinTemplateMessageVO;
+import com.vvd.domain.vo.WeixinTemplateMessageVO;
 import com.vvd.domain.req.WeixinQrCodeReq;
 import com.vvd.domain.res.WeixinQrCodeRes;
 import com.vvd.domain.res.WeixinTokenRes;
@@ -17,7 +16,6 @@ import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author vvd

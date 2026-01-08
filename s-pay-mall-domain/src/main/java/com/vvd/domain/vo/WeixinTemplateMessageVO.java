@@ -1,4 +1,4 @@
-package com.vvd.domain.po;
+package com.vvd.domain.vo;
 
 import java.util.HashMap;
 import java.util.Map;

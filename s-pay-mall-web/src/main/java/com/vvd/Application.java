@@ -11,9 +11,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @description
  * @create 2026-01-06 13:39
  */
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication
 @Configurable
-@EnableScheduling
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class);
