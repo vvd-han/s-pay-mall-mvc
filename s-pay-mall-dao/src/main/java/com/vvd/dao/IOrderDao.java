@@ -14,4 +14,6 @@ public interface IOrderDao {
     void insert(PayOrder payOrder);
 
     PayOrder queryUnPayOrder(PayOrder payOrderReq);
+
+    void updateOrderPayInfo(PayOrder payOrder);
 }

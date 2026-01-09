@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
  */
 @Slf4j
 @RestController
-@CrossOrigin
+@CrossOrigin("*")
 @RequestMapping("/api/v1/login")
 public class LoginController {
     @Resource
