@@ -16,7 +16,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableConfigurationProperties(AliPayConfigProperties.class)
 public class AliPayConfig {
 
-    @Bean
+    @Bean("alipayClient")
     public AlipayClient alipayClient(AliPayConfigProperties properties) {
         return new DefaultAlipayClient(properties.getGatewayUrl(),
                 properties.getApp_id(),

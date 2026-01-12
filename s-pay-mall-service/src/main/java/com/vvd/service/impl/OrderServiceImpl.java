@@ -1,9 +1,11 @@
 package com.vvd.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
 import com.alipay.api.request.AlipayTradePagePayRequest;
+import com.google.common.eventbus.EventBus;
 import com.vvd.common.constants.Constants;
 import com.vvd.dao.IOrderDao;
 import com.vvd.domain.po.PayOrder;
@@ -19,13 +21,16 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.math.BigDecimal;
+import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author vvd
  * @description
  * @create 2026-01-08 22:56
  */
+
 @Slf4j
 @Service
 public class OrderServiceImpl implements IOrderService {
@@ -42,6 +47,9 @@ public class OrderServiceImpl implements IOrderService {
     @Resource
     private AlipayClient alipayClient;
 
+    @Resource
+    private EventBus eventBus;
+
     @Override
     public PayOrderRes createOrder(ShopCartReq shopCartReq) throws Exception {
         // 1. 查询当前用户是否存在未支付订单或掉单订单
@@ -50,15 +58,16 @@ public class OrderServiceImpl implements IOrderService {
         payOrderReq.setProductId(shopCartReq.getProductId());
 
         PayOrder unpaidOrder = orderDao.queryUnPayOrder(payOrderReq);
-        if (unpaidOrder != null && unpaidOrder.getStatus().equals(Constants.OrderStatusEnum.PAY_WAIT.getCode())) {
-            log.info("存在未支付订单, 请您先处理。userId:{} produetId:{} orderId:{}", shopCartReq.getUserId(), shopCartReq.getProductId(), unpaidOrder.getOrderId());
+
+        if (null != unpaidOrder && Constants.OrderStatusEnum.PAY_WAIT.getCode().equals(unpaidOrder.getStatus())) {
+            log.info("创建订单-存在，已存在未支付订单。userId:{} productId:{} orderId:{}", shopCartReq.getUserId(), shopCartReq.getProductId(), unpaidOrder.getOrderId());
             return PayOrderRes.builder()
                     .orderId(unpaidOrder.getOrderId())
                     .payUrl(unpaidOrder.getPayUrl())
                     .build();
-        } else if (unpaidOrder != null && unpaidOrder.getStatus().equals(Constants.OrderStatusEnum.CREATE.getCode())) {
+        } else if (null != unpaidOrder && Constants.OrderStatusEnum.CREATE.getCode().equals(unpaidOrder.getStatus())) {
             log.info("创建订单-存在，存在未创建支付单订单，创建支付单开始 userId:{} productId:{} orderId:{}", shopCartReq.getUserId(), shopCartReq.getProductId(), unpaidOrder.getOrderId());
-            PayOrder payOrder = doPrePayOrder(unpaidOrder.getProductId(), unpaidOrder.getProductName(), unpaidOrder.getOrderId(), unpaidOrder.getTotalAmount());
+            PayOrder payOrder = doPrepayOrder(unpaidOrder.getProductId(), unpaidOrder.getProductName(), unpaidOrder.getOrderId(), unpaidOrder.getTotalAmount());
             return PayOrderRes.builder()
                     .orderId(payOrder.getOrderId())
                     .payUrl(payOrder.getPayUrl())
@@ -76,10 +85,10 @@ public class OrderServiceImpl implements IOrderService {
                 .totalAmount(productVO.getPrice())
                 .orderTime(new Date())
                 .status(Constants.OrderStatusEnum.CREATE.getCode())
-                .build()
-        );
+                .build());
+
         // 3. 创建支付单
-        PayOrder payOrder = doPrePayOrder(productVO.getProductId(), productVO.getProductName(), orderId, productVO.getPrice());
+        PayOrder payOrder = doPrepayOrder(productVO.getProductId(), productVO.getProductName(), orderId, productVO.getPrice());
 
         return PayOrderRes.builder()
                 .orderId(orderId)
@@ -87,7 +96,32 @@ public class OrderServiceImpl implements IOrderService {
                 .build();
     }
 
-    private PayOrder doPrePayOrder(String productId, String productName, String orderId, BigDecimal totalAmount) throws AlipayApiException {
+    @Override
+    public void changeOrderPaySuccess(String orderId) {
+        PayOrder payOrderReq = new PayOrder();
+        payOrderReq.setOrderId(orderId);
+        payOrderReq.setStatus(Constants.OrderStatusEnum.PAY_SUCCESS.getCode());
+        orderDao.changeOrderPaySuccess(payOrderReq);
+
+        eventBus.post(JSON.toJSONString(payOrderReq));
+    }
+
+    @Override
+    public List<String> queryNoPayNotifyOrder() {
+        return orderDao.queryNoPayNotifyOrder();
+    }
+
+    @Override
+    public List<String> queryTimeoutCloseOrderList() {
+        return orderDao.queryTimeoutCloseOrderList();
+    }
+
+    @Override
+    public boolean changeOrderClose(String orderId) {
+        return orderDao.changeOrderClose(orderId);
+    }
+
+    private PayOrder doPrepayOrder(String productId, String productName, String orderId, BigDecimal totalAmount) throws AlipayApiException {
         AlipayTradePagePayRequest request = new AlipayTradePagePayRequest();
         request.setNotifyUrl(notifyUrl);
         request.setReturnUrl(returnUrl);
@@ -110,4 +144,5 @@ public class OrderServiceImpl implements IOrderService {
 
         return payOrder;
     }
+
 }

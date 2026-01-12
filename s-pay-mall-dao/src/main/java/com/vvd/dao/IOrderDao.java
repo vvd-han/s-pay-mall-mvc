@@ -3,6 +3,8 @@ package com.vvd.dao;
 import com.vvd.domain.po.PayOrder;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * @author vvd
  * @description
@@ -13,7 +15,16 @@ public interface IOrderDao {
 
     void insert(PayOrder payOrder);
 
-    PayOrder queryUnPayOrder(PayOrder payOrderReq);
+    PayOrder queryUnPayOrder(PayOrder payOrder);
 
     void updateOrderPayInfo(PayOrder payOrder);
+
+    void changeOrderPaySuccess(PayOrder order);
+
+    List<String> queryNoPayNotifyOrder();
+
+    List<String> queryTimeoutCloseOrderList();
+
+    boolean changeOrderClose(String orderId);
+
 }
