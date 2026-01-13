@@ -1,0 +1,93 @@
+26-01-09.17:11:11.555 [main            ] INFO  Application            - Starting Application using Java 1.8.0_471 on HanMacBook-Pro.local with PID 21283 (/Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd/s-pay-mall-web/target/classes started by vvd in /Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd)
+26-01-09.17:11:11.556 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+26-01-09.17:11:12.146 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+26-01-09.17:11:12.152 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+26-01-09.17:11:12.153 [main            ] INFO  StandardService        - Starting service [Tomcat]
+26-01-09.17:11:12.153 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+26-01-09.17:11:12.295 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+26-01-09.17:11:12.295 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 707 ms
+26-01-09.17:11:12.998 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+26-01-09.17:11:13.018 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+26-01-09.17:11:13.025 [main            ] INFO  Application            - Started Application in 1.714 seconds (JVM running for 2.954)
+26-01-09.17:12:14.713 [http-nio-8080-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+26-01-09.17:12:14.713 [http-nio-8080-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+26-01-09.17:12:14.714 [http-nio-8080-exec-2] INFO  DispatcherServlet      - Completed initialization in 1 ms
+26-01-09.17:12:14.740 [http-nio-8080-exec-2] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+26-01-09.17:12:58.506 [http-nio-8080-exec-3] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'createPayRequestDTO' for method parameter type CreatePayRequestDTO is not present]
+26-01-09.17:13:47.182 [main            ] INFO  Application            - Starting Application using Java 1.8.0_471 on HanMacBook-Pro.local with PID 21357 (/Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd/s-pay-mall-web/target/classes started by vvd in /Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd)
+26-01-09.17:13:47.184 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+26-01-09.17:13:47.753 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+26-01-09.17:13:47.759 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+26-01-09.17:13:47.759 [main            ] INFO  StandardService        - Starting service [Tomcat]
+26-01-09.17:13:47.759 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+26-01-09.17:13:47.869 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+26-01-09.17:13:47.869 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 654 ms
+26-01-09.17:13:48.529 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+26-01-09.17:13:48.548 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+26-01-09.17:13:48.554 [main            ] INFO  Application            - Started Application in 1.615 seconds (JVM running for 2.099)
+26-01-09.17:13:55.246 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+26-01-09.17:13:55.248 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+26-01-09.17:13:55.249 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+26-01-09.17:13:55.335 [http-nio-8080-exec-1] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'createPayRequestDTO' for method parameter type CreatePayRequestDTO is not present]
+26-01-09.17:16:26.359 [main            ] INFO  Application            - Starting Application using Java 1.8.0_471 on HanMacBook-Pro.local with PID 21449 (/Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd/s-pay-mall-web/target/classes started by vvd in /Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd)
+26-01-09.17:16:26.361 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+26-01-09.17:16:26.924 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+26-01-09.17:16:26.929 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+26-01-09.17:16:26.930 [main            ] INFO  StandardService        - Starting service [Tomcat]
+26-01-09.17:16:26.930 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+26-01-09.17:16:27.036 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+26-01-09.17:16:27.036 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 645 ms
+26-01-09.17:16:27.705 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+26-01-09.17:16:27.725 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+26-01-09.17:16:27.731 [main            ] INFO  Application            - Started Application in 1.616 seconds (JVM running for 2.088)
+26-01-09.17:16:34.786 [http-nio-8080-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+26-01-09.17:16:34.786 [http-nio-8080-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+26-01-09.17:16:34.787 [http-nio-8080-exec-2] INFO  DispatcherServlet      - Completed initialization in 1 ms
+26-01-09.17:16:34.916 [http-nio-8080-exec-2] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:10001 productId:10001
+26-01-09.17:16:34.938 [http-nio-8080-exec-2] INFO  HikariDataSource       - HikariPool-1 - Starting...
+26-01-09.17:16:35.312 [http-nio-8080-exec-2] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+26-01-09.17:16:35.603 [http-nio-8080-exec-2] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:10001 productId:100001 orderId:7790396545492813
+26-01-09.17:18:12.029 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+26-01-09.17:18:12.053 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+26-01-09.17:18:13.751 [main            ] INFO  Application            - Starting Application using Java 1.8.0_471 on HanMacBook-Pro.local with PID 21492 (/Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd/s-pay-mall-web/target/classes started by vvd in /Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd)
+26-01-09.17:18:13.753 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+26-01-09.17:18:14.338 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+26-01-09.17:18:14.344 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+26-01-09.17:18:14.344 [main            ] INFO  StandardService        - Starting service [Tomcat]
+26-01-09.17:18:14.344 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+26-01-09.17:18:14.456 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+26-01-09.17:18:14.456 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 675 ms
+26-01-09.17:18:15.190 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+26-01-09.17:18:15.214 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+26-01-09.17:18:15.221 [main            ] INFO  Application            - Started Application in 1.714 seconds (JVM running for 2.342)
+26-01-09.17:18:21.243 [http-nio-8080-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+26-01-09.17:18:21.244 [http-nio-8080-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+26-01-09.17:18:21.246 [http-nio-8080-exec-2] INFO  DispatcherServlet      - Completed initialization in 2 ms
+26-01-09.17:18:21.408 [http-nio-8080-exec-2] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:10001 productId:10001
+26-01-09.17:18:21.429 [http-nio-8080-exec-2] INFO  HikariDataSource       - HikariPool-1 - Starting...
+26-01-09.17:18:21.748 [http-nio-8080-exec-2] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+26-01-09.17:18:21.857 [http-nio-8080-exec-2] INFO  OrderServiceImpl       - 存在未支付订单, 请您先处理。userId:10001 produetId:100001 orderId:7790396545492813
+26-01-09.17:18:21.858 [http-nio-8080-exec-2] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:10001 productId:100001 orderId:7790396545492813
+26-01-09.17:19:52.954 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+26-01-09.17:19:53.027 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+26-01-09.17:19:55.706 [main            ] INFO  Application            - Starting Application using Java 1.8.0_471 on HanMacBook-Pro.local with PID 21555 (/Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd/s-pay-mall-web/target/classes started by vvd in /Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd)
+26-01-09.17:19:55.707 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+26-01-09.17:19:56.282 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+26-01-09.17:19:56.288 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+26-01-09.17:19:56.288 [main            ] INFO  StandardService        - Starting service [Tomcat]
+26-01-09.17:19:56.288 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+26-01-09.17:19:56.399 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+26-01-09.17:19:56.399 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 661 ms
+26-01-09.17:19:57.162 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+26-01-09.17:19:57.195 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+26-01-09.17:19:57.209 [main            ] INFO  Application            - Started Application in 1.773 seconds (JVM running for 2.292)
+26-01-09.17:20:03.528 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+26-01-09.17:20:03.528 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+26-01-09.17:20:03.529 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+26-01-09.17:20:03.826 [http-nio-8080-exec-1] INFO  AliPayController       - 商品下单，根据商品ID创建支付单开始 userId:10001 productId:10001
+26-01-09.17:20:03.857 [http-nio-8080-exec-1] INFO  HikariDataSource       - HikariPool-1 - Starting...
+26-01-09.17:20:04.151 [http-nio-8080-exec-1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+26-01-09.17:20:04.246 [http-nio-8080-exec-1] INFO  OrderServiceImpl       - 存在未支付订单, 请您先处理。userId:10001 produetId:100001 orderId:7790396545492813
+26-01-09.17:20:04.247 [http-nio-8080-exec-1] INFO  AliPayController       - 商品下单，根据商品ID创建支付单完成 userId:10001 productId:100001 orderId:7790396545492813
+26-01-09.17:21:25.467 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+26-01-09.17:21:25.539 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.

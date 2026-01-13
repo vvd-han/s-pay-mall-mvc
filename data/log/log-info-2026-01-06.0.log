@@ -1,0 +1,102 @@
+26-01-06.14:52:35.036 [main            ] INFO  Application            - Starting Application using Java 1.8.0_471 on HanMacBook-Pro.local with PID 46751 (/Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd/s-pay-mall-web/target/classes started by vvd in /Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd)
+26-01-06.14:52:35.038 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+26-01-06.14:52:35.413 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.vvd]' package. Please check your configuration.
+26-01-06.14:52:35.672 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+26-01-06.14:52:35.678 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+26-01-06.14:52:35.678 [main            ] INFO  StandardService        - Starting service [Tomcat]
+26-01-06.14:52:35.678 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+26-01-06.14:52:35.786 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+26-01-06.14:52:35.786 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 715 ms
+26-01-06.14:52:35.833 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'weixinPortalController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'weixin.config.originalid' in value "${weixin.config.originalid}"
+26-01-06.14:52:35.835 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+26-01-06.14:52:35.844 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+26-01-06.14:52:35.858 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'weixinPortalController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'weixin.config.originalid' in value "${weixin.config.originalid}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.vvd.Application.main(Application.java:19)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'weixin.config.originalid' in value "${weixin.config.originalid}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:936)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	... 17 common frames omitted
+26-01-06.14:54:52.437 [main            ] INFO  Application            - Starting Application using Java 1.8.0_471 on HanMacBook-Pro.local with PID 46788 (/Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd/s-pay-mall-web/target/classes started by vvd in /Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd)
+26-01-06.14:54:52.440 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+26-01-06.14:54:52.816 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.vvd]' package. Please check your configuration.
+26-01-06.14:54:53.093 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+26-01-06.14:54:53.100 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+26-01-06.14:54:53.100 [main            ] INFO  StandardService        - Starting service [Tomcat]
+26-01-06.14:54:53.100 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+26-01-06.14:54:53.216 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+26-01-06.14:54:53.216 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 735 ms
+26-01-06.14:54:53.448 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+26-01-06.14:54:53.450 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+26-01-06.14:54:53.459 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+26-01-06.14:54:53.472 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
+
+26-01-06.14:59:17.599 [main            ] INFO  Application            - Starting Application using Java 1.8.0_471 on HanMacBook-Pro.local with PID 46839 (/Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd/s-pay-mall-web/target/classes started by vvd in /Users/vvd/1024/Java-Project/s-pay-mall-mvc-vvd)
+26-01-06.14:59:17.601 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+26-01-06.14:59:18.159 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8080 (http)
+26-01-06.14:59:18.164 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8080"]
+26-01-06.14:59:18.165 [main            ] INFO  StandardService        - Starting service [Tomcat]
+26-01-06.14:59:18.165 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+26-01-06.14:59:18.279 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+26-01-06.14:59:18.280 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 654 ms
+26-01-06.14:59:18.605 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8080"]
+26-01-06.14:59:18.624 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8080 (http) with context path ''
+26-01-06.14:59:18.632 [main            ] INFO  Application            - Started Application in 1.284 seconds (JVM running for 1.832)
+26-01-06.15:00:22.998 [http-nio-8080-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+26-01-06.15:00:22.999 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+26-01-06.15:00:22.999 [http-nio-8080-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+26-01-06.15:00:23.042 [http-nio-8080-exec-1] INFO  WeixinPortalController - 接收微信公众号信息请求og3q33P7uHRse-kH-x0Qk1M_Yq48开始 <xml><ToUserName><![CDATA[gh_0d537f05e054]]></ToUserName>
+<FromUserName><![CDATA[og3q33P7uHRse-kH-x0Qk1M_Yq48]]></FromUserName>
+<CreateTime>1767682821</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[你好啊]]></Content>
+<MsgId>25307136851392997</MsgId>
+</xml>
